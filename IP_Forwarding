@@ -1,0 +1,13 @@
+provider "google" {
+  credentials = file("service-account.json")
+  project     = "your-project-id"
+  region      = "us-central1"
+}
+
+resource "google_compute_forwarding_rule" "bad_example" {
+  name        = "bad-example-forwarding-rule"
+  region      = "us-central1"
+  ip_protocol = "TCP"
+  port_range  = "80"
+  target      = "instance-url"
+}
