@@ -52,3 +52,4 @@ allow {
   }
 target_tags = ["app"]
   source_ranges = ["0.0.0.0/0"]
+}
